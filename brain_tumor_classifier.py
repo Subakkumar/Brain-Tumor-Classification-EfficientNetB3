@@ -358,7 +358,7 @@ class ImprovedBrainTumorClassifier:
 
 # MAIN EXECUTION
 if __name__ == "__main__":
-    DATA_PATH = r"D:\Suba Projects\P1-Brain-Tumor-Classification-EfficientNetB3\DataSet Brain Tumor"
+    DATA_PATH = r"PATH HERE" #Kindly change the Path
     
     if not os.path.exists(DATA_PATH):
         print(f"Dataset not found at: {DATA_PATH}")
@@ -366,4 +366,5 @@ if __name__ == "__main__":
     else:
         # Run improved classifier
         classifier = ImprovedBrainTumorClassifier(data_dir=DATA_PATH)
+
         classifier.run_improved_pipeline()
