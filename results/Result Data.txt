@@ -1,0 +1,134 @@
+STARTING IMPROVED BRAIN TUMOR CLASSIFICATION PIPELINE
+============================================================
+Loading data from: D:\Suba Projects\P1-Brain-Tumor-Classification-EfficientNetB3\DataSet Brain Tumor\Training      
+Loaded 5712 images from 4 classes
+Class distribution:
+label
+notumor       1595
+pituitary     1457
+meningioma    1339
+glioma        1321
+Name: count, dtype: int64
+Training samples: 4569
+Validation samples: 1143
+Creating advanced data generators...
+Loading data from: D:\Suba Projects\P1-Brain-Tumor-Classification-EfficientNetB3\DataSet Brain Tumor\Testing       
+Loaded 1311 images from 4 classes
+Class distribution:
+label
+notumor       405
+meningioma    306
+glioma        300
+pituitary     300
+Name: count, dtype: int64
+Test samples: 1311
+Classes: ['meningioma', 'notumor', 'glioma', 'pituitary']
+
+--- PHASE 1: Initial Training ---
+Starting improved training...
+Found 4569 validated image filenames belonging to 4 classes.
+Found 1143 validated image filenames belonging to 4 classes.
+Building improved model...
+2025-11-25 06:46:55.640234: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Downloading data from https://storage.googleapis.com/keras-applications/efficientnetb0_notop.h5
+16705208/16705208 ━━━━━━━━━━━━━━━━━━━━ 3s 0us/step   
+Model built for 4 classes: ['glioma', 'meningioma', 'notumor', 'pituitary']
+Class weights: {0: np.float64(1.0806527909176915), 1: np.float64(1.0665266106442577), 2: np.float64(0.895180250783699), 3: np.float64(0.9804721030042919)}
+Training for 30 epochs...
+Epoch 1/30
+143/143 ━━━━━━━━━━━━━━━━━━━━ 0s 1s/step - accuracy: 0.2742 - loss: 3.0091WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+143/143 ━━━━━━━━━━━━━━━━━━━━ 220s 1s/step - accuracy: 0.2753 - loss: 2.8603 - val_accuracy: 0.2642 - val_loss: 2.4376 - learning_rate: 0.0010
+Epoch 2/30
+143/143 ━━━━━━━━━━━━━━━━━━━━ 0s 1s/step - accuracy: 0.2798 - loss: 2.6487WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+143/143 ━━━━━━━━━━━━━━━━━━━━ 209s 1s/step - accuracy: 0.2795 - loss: 2.6063 - val_accuracy: 0.2791 - val_loss: 2.3547 - learning_rate: 0.0010
+Epoch 3/30
+143/143 ━━━━━━━━━━━━━━━━━━━━ 211s 1s/step - accuracy: 0.2924 - loss: 2.4340 - val_accuracy: 0.2791 - val_loss: 2.2412 - learning_rate: 0.0010
+Epoch 4/30
+143/143 ━━━━━━━━━━━━━━━━━━━━ 0s 1s/step - accuracy: 0.3013 - loss: 2.3218WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+143/143 ━━━━━━━━━━━━━━━━━━━━ 210s 1s/step - accuracy: 0.3075 - loss: 2.2811 - val_accuracy: 0.4558 - val_loss: 2.0791 - learning_rate: 0.0010
+Epoch 5/30
+143/143 ━━━━━━━━━━━━━━━━━━━━ 220s 2s/step - accuracy: 0.3027 - loss: 2.1529 - val_accuracy: 0.3928 - val_loss: 1.9128 - learning_rate: 0.0010
+Epoch 6/30
+143/143 ━━━━━━━━━━━━━━━━━━━━ 222s 2s/step - accuracy: 0.3114 - loss: 2.0233 - val_accuracy: 0.4304 - val_loss: 1.7884 - learning_rate: 0.0010
+Epoch 7/30
+143/143 ━━━━━━━━━━━━━━━━━━━━ 0s 1s/step - accuracy: 0.3110 - loss: 1.9659WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+143/143 ━━━━━━━━━━━━━━━━━━━━ 225s 2s/step - accuracy: 0.3174 - loss: 1.9332 - val_accuracy: 0.4567 - val_loss: 1.7020 - learning_rate: 0.0010
+Epoch 8/30
+143/143 ━━━━━━━━━━━━━━━━━━━━ 222s 2s/step - accuracy: 0.3215 - loss: 1.8275 - val_accuracy: 0.4313 - val_loss: 1.6270 - learning_rate: 0.0010
+Epoch 9/30
+143/143 ━━━━━━━━━━━━━━━━━━━━ 213s 1s/step - accuracy: 0.3198 - loss: 1.7588 - val_accuracy: 0.3473 - val_loss: 1.5688 - learning_rate: 0.0010
+Epoch 10/30
+143/143 ━━━━━━━━━━━━━━━━━━━━ 0s 1s/step - accuracy: 0.3154 - loss: 1.7220WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+143/143 ━━━━━━━━━━━━━━━━━━━━ 208s 1s/step - accuracy: 0.3259 - loss: 1.7006 - val_accuracy: 0.4681 - val_loss: 1.5030 - learning_rate: 0.0010
+Epoch 11/30
+143/143 ━━━━━━━━━━━━━━━━━━━━ 208s 1s/step - accuracy: 0.3106 - loss: 1.6590 - val_accuracy: 0.4112 - val_loss: 1.4715 - learning_rate: 0.0010
+Epoch 12/30
+143/143 ━━━━━━━━━━━━━━━━━━━━ 0s 1s/step - accuracy: 0.3202 - loss: 1.6058WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+143/143 ━━━━━━━━━━━━━━━━━━━━ 216s 2s/step - accuracy: 0.3250 - loss: 1.5974 - val_accuracy: 0.5031 - val_loss: 1.4225 - learning_rate: 0.0010
+Epoch 13/30
+143/143 ━━━━━━━━━━━━━━━━━━━━ 215s 2s/step - accuracy: 0.3224 - loss: 1.5763 - val_accuracy: 0.4506 - val_loss: 1.4111 - learning_rate: 0.0010
+Epoch 14/30
+143/143 ━━━━━━━━━━━━━━━━━━━━ 209s 1s/step - accuracy: 0.3294 - loss: 1.5415 - val_accuracy: 0.4611 - val_loss: 1.3593 - learning_rate: 0.0010
+Epoch 15/30
+143/143 ━━━━━━━━━━━━━━━━━━━━ 210s 1s/step - accuracy: 0.3327 - loss: 1.5142 - val_accuracy: 0.4313 - val_loss: 1.3627 - learning_rate: 0.0010
+Epoch 16/30
+143/143 ━━━━━━━━━━━━━━━━━━━━ 209s 1s/step - accuracy: 0.3303 - loss: 1.5020 - val_accuracy: 0.3771 - val_loss: 1.3489 - learning_rate: 0.0010
+Epoch 17/30
+143/143 ━━━━━━━━━━━━━━━━━━━━ 207s 1s/step - accuracy: 0.3421 - loss: 1.4654 - val_accuracy: 0.4129 - val_loss: 1.3206 - learning_rate: 0.0010
+Epoch 18/30
+143/143 ━━━━━━━━━━━━━━━━━━━━ 212s 1s/step - accuracy: 0.3322 - loss: 1.4803 - val_accuracy: 0.4068 - val_loss: 1.3244 - learning_rate: 0.0010
+Epoch 19/30
+143/143 ━━━━━━━━━━━━━━━━━━━━ 215s 2s/step - accuracy: 0.3386 - loss: 1.4633 - val_accuracy: 0.4532 - val_loss: 1.3288 - learning_rate: 0.0010
+Epoch 20/30
+143/143 ━━━━━━━━━━━━━━━━━━━━ 211s 1s/step - accuracy: 0.3349 - loss: 1.4603 - val_accuracy: 0.3955 - val_loss: 1.3207 - learning_rate: 0.0010
+Epoch 21/30
+143/143 ━━━━━━━━━━━━━━━━━━━━ 236s 2s/step - accuracy: 0.3325 - loss: 1.4511 - val_accuracy: 0.4471 - val_loss: 1.3204 - learning_rate: 0.0010
+Epoch 22/30
+143/143 ━━━━━━━━━━━━━━━━━━━━ 219s 2s/step - accuracy: 0.3301 - loss: 1.4536 - val_accuracy: 0.4987 - val_loss: 1.3033 - learning_rate: 0.0010
+
+--- PHASE 2: Fine-tuning ---
+Starting fine-tuning...
+Fine-tuning for 10 epochs...
+Epoch 1/10
+143/143 ━━━━━━━━━━━━━━━━━━━━ 409s 3s/step - accuracy: 0.3287 - loss: 1.5800 - val_accuracy: 0.2310 - val_loss: 1.8686
+Epoch 2/10
+143/143 ━━━━━━━━━━━━━━━━━━━━ 384s 3s/step - accuracy: 0.3898 - loss: 1.4915 - val_accuracy: 0.3062 - val_loss: 1.5809
+Epoch 3/10
+143/143 ━━━━━━━━━━━━━━━━━━━━ 381s 3s/step - accuracy: 0.3861 - loss: 1.4970 - val_accuracy: 0.4077 - val_loss: 1.3992
+Epoch 4/10
+143/143 ━━━━━━━━━━━━━━━━━━━━ 387s 3s/step - accuracy: 0.4064 - loss: 1.4507 - val_accuracy: 0.2983 - val_loss: 1.4543
+Epoch 5/10
+143/143 ━━━━━━━━━━━━━━━━━━━━ 388s 3s/step - accuracy: 0.4334 - loss: 1.4369 - val_accuracy: 0.2791 - val_loss: 1.6447
+Epoch 6/10
+143/143 ━━━━━━━━━━━━━━━━━━━━ 389s 3s/step - accuracy: 0.4395 - loss: 1.4189 - val_accuracy: 0.2791 - val_loss: 1.6081
+Epoch 7/10
+143/143 ━━━━━━━━━━━━━━━━━━━━ 369s 3s/step - accuracy: 0.4344 - loss: 1.4135 - val_accuracy: 0.2791 - val_loss: 1.7188
+Epoch 8/10
+143/143 ━━━━━━━━━━━━━━━━━━━━ 359s 3s/step - accuracy: 0.4443 - loss: 1.4016 - val_accuracy: 0.2791 - val_loss: 1.8215
+
+--- PHASE 3: Evaluation ---
+
+Evaluating model...
+Found 1311 validated image filenames belonging to 4 classes.
+Test Accuracy: 0.3944
+Test Loss: 1.4860
+
+==================================================
+CLASSIFICATION REPORT
+==================================================
+              precision    recall  f1-score   support
+
+      glioma       0.30      0.98      0.46       300
+  meningioma       0.31      0.08      0.13       306
+     notumor       0.83      0.48      0.61       405
+
+    accuracy                           0.39      1311
+   macro avg       0.61      0.39      0.30      1311
+weighted avg       0.62      0.39      0.32      1311
+
+
+Showing 6 sample predictions...
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+
+IMPROVED PIPELINE COMPLETED! Final Accuracy: 0.3944
